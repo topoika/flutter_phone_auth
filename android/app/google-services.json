@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "407255967578",
+    "project_id": "dogalgaz-69c9c",
+    "storage_bucket": "dogalgaz-69c9c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407255967578:android:38ec422f2549615c477563",
+        "android_client_info": {
+          "package_name": "com.example.phone_auth_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407255967578-mlf1uo2ijffsj679rl5ho2iuhcvinn5u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.phone_auth_test",
+            "certificate_hash": "aa9d3217e48fc4dc1364be73dc199d828ce6de14"
+          }
+        },
+        {
+          "client_id": "407255967578-6ie5510pi4g6595jp85fv1odtalk9rr3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvaFbrysB1sURnJjVE9CoROu0Z5IaKRUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407255967578-6ie5510pi4g6595jp85fv1odtalk9rr3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
