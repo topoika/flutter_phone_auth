@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
         ],
       ),
       body: Center(
-        child: Text('You have done it dude'),
+        child: Text('You have made it dude now go on'),
       ),
     );
   }

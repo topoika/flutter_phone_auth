@@ -9,7 +9,8 @@ class PhoneNumber extends StatefulWidget {
 }
 
 class _PhoneNumberState extends State<PhoneNumber> {
-  final TextEditingController _phoneNumberController = TextEditingController();
+  final TextEditingController phoneNumber = TextEditingController();
+  bool loading = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,27 +20,37 @@ class _PhoneNumberState extends State<PhoneNumber> {
       body: SafeArea(
         child: Container(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Phone Number'),
-              TextField(
-                controller: _phoneNumberController,
-                textAlign: TextAlign.center,
-                keyboardType: TextInputType.phone,
-                decoration: const InputDecoration(
-                  labelText: 'Phone number (+xx xxx-xxx-xxxx)',
+              Text('Enter a valid Phone Number'),
+              SizedBox(height: 10),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: TextField(
+                  controller: phoneNumber,
+                  textAlign: TextAlign.center,
+                  keyboardType: TextInputType.phone,
+                  decoration: InputDecoration(
+                    labelText: '(+1234567890)',
+                    border: OutlineInputBorder(),
+                  ),
                 ),
               ),
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                padding: EdgeInsets.symmetric(vertical: 16.0),
                 alignment: Alignment.center,
-                child: RaisedButton(
-                    child: Text("Continue"),
-                    onPressed: () {
-                      AuthFunc()
-                          .registerUser(_phoneNumberController.text, context);
-                    },
-                    color: Colors.greenAccent[700]),
-              ),
+                child: loading
+                    ? CircularProgressIndicator()
+                    : RaisedButton(
+                        child: Text("Continue"),
+                        onPressed: () {
+                          setState(() {
+                            loading = true;
+                          });
+                          AuthFunc().registerUser(phoneNumber.text, context);
+                        },
+                        color: Colors.greenAccent[700]),
+              )
             ],
           ),
         ),

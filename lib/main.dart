@@ -11,12 +11,11 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter Phone Auth',
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
